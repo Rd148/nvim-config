@@ -4,7 +4,7 @@ local ensure_packer = function()
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
     vim.cmd [[packadd packer.nvim]]
-    return true 
+    return true
   end
   return false
 end
@@ -32,8 +32,7 @@ return require('packer').startup(function(use)
   'nvim-telescope/telescope.nvim',
   tag = '0.1.5',
   requires = { {'nvim-lua/plenary.nvim'} }
-}
-  
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
